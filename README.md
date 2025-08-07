@@ -18,12 +18,6 @@ Node -----> 20.19.4
     npm install
     ```
 
-## Running the Development Server
-
-To start the application locally with live reload:
-
-
-
 ## Development server
 
 To start a local development server, run:
@@ -43,6 +37,7 @@ npm run build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
 
 
 
