@@ -1,0 +1,39 @@
+<div class="game-container">
+  <!-- Header -->
+  <div class="game-header">
+    <div class="credit-balance">
+      <span class="credit-label">CREDITS:</span>
+      <span class="credit-amount">{{ creditBalance | number }}</span>
+    </div>
+    <div class="game-title">
+      <h1>SPIN 8 SLICES</h1>
+    </div>
+    <div class="back-button">
+      <button (click)="goBack()">← BACK</button>
+    </div>
+  </div>
+
+  <!-- Game Content -->
+  <div class="game-content">
+    <div class="welcome-message">
+      <h2>Welcome to the Spin Game!</h2>
+      <p>Get ready to test your luck with our exciting 8-slice wheel!</p>
+    </div>
+    
+    <div class="start-game-section">
+      <button class="start-game-btn" (click)="startBonusScreen()">
+        START SPINNING
+      </button>
+    </div>
+
+    <div class="game-rules">
+      <h3>How to Play:</h3>
+      <ul>
+        <li>Click the spin button to start</li>
+        <li>Watch the wheel spin with exciting animations</li>
+        <li>Win credits based on where the wheel stops</li>
+        <li>Celebrate your wins!</li>
+      </ul>
+    </div>
+  </div>
+</div> 

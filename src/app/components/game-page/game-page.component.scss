@@ -1,0 +1,147 @@
+.game-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.credit-balance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.credit-label {
+  color: #ffd700;
+}
+
+.credit-amount {
+  color: #4ecdc4;
+  font-size: 1.5rem;
+}
+
+.game-title h1 {
+  font-size: 2rem;
+  margin: 0;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.back-button button {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.game-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.welcome-message {
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.welcome-message h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.welcome-message p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.start-game-section {
+  margin: 2rem 0;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.start-game-btn {
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.start-game-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+}
+
+.game-rules {
+  margin-top: 3rem;
+  animation: fadeInUp 1s ease-out 0.6s both;
+  max-width: 500px;
+}
+
+.game-rules h3 {
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.game-rules ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.game-rules li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.game-rules li:before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #4ecdc4;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

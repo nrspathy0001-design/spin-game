@@ -1,0 +1,71 @@
+<div class="bonus-container">
+  <!-- Header -->
+  <div class="bonus-header">
+    <div class="credit-balance">
+      <span class="credit-label">CREDITS:</span>
+      <span class="credit-amount">{{ creditBalance | number }}</span>
+    </div>
+    <div class="game-title">
+      <h1>SPIN THE WHEEL</h1>
+    </div>
+    <div class="back-button">
+      <button (click)="goBack()">← BACK</button>
+    </div>
+  </div>
+
+  <!-- Wheel Section -->
+  <div class="wheel-section">
+    <div class="wheel-container">
+      <div class="wheel" [style.transform]="'rotate(' + wheelRotation + 'deg)'">
+        <div 
+          *ngFor="let slice of getWheelSlices(); let i = index" 
+          class="wheel-slice"
+          [style.transform]="'rotate(' + (i * 45) + 'deg)'"
+          [style.background]="slice.color"
+        >
+          <div class="slice-content">
+            <span class="credits">{{ slice.credits }}</span>
+          </div>
+        </div>
+        <div class="wheel-center"></div>
+      </div>
+      <div class="wheel-pointer"></div>
+    </div>
+
+    <!-- Spin Button -->
+    <div class="spin-controls" *ngIf="!showResult">
+      <button 
+        class="spin-button" 
+        (click)="spinWheel()" 
+        [disabled]="isSpinning"
+        [class.spinning]="isSpinning"
+      >
+        {{ isSpinning ? 'SPINNING...' : 'SPIN WHEEL' }}
+      </button>
+    </div>
+
+    <!-- Result Display -->
+    <div class="result-display" *ngIf="showResult && spinResult">
+      <div class="result-card">
+        <h2>🎉 CONGRATULATIONS! 🎉</h2>
+        <div class="result-amount">
+          <span class="amount-label">YOU WON:</span>
+          <span class="amount-value">{{ spinResult.credits | number }} CREDITS</span>
+        </div>
+        <div class="result-actions">
+          <button class="spin-again-btn" (click)="spinAgain()">SPIN AGAIN</button>
+          <button class="back-btn" (click)="goBack()">BACK TO GAME</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- 
+fix the below the issue 
+
+when click the SPIN WHEEL button then it chnaging to SPINNING... button then issues is not showing the winning annimation the need to play in next spin countinuesly 
+
+when play the need spining audio and when click button click audio
+spinng wheel need round structure
+
+-->
