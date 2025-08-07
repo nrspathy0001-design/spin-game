@@ -4,6 +4,26 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 Node -----> 20.19.4
 
+
+## Installation
+
+1. Clone this repository:
+    ```
+    git clone https://github.com/your-username/your-repo.git
+    cd your-repo
+    ```
+
+2. Install all dependencies:
+    ```
+    npm install
+    ```
+
+## Running the Development Server
+
+To start the application locally with live reload:
+
+
+
 ## Development server
 
 To start a local development server, run:
@@ -23,5 +43,6 @@ npm run build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
 
 
